@@ -152,6 +152,7 @@ docker-compose exec app npm test
 docker-compose exec app npm run coverage
 docker-compose down
 ```
+
 ---
 
 ## Screenshots

@@ -153,8 +153,6 @@ docker-compose exec app npm run coverage
 docker-compose down
 ```
 
----
-
 ## Screenshots
 
 The following screenshots demonstrate the successful execution, testing, and Dockerisation of the project.

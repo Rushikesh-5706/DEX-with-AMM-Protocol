@@ -175,8 +175,6 @@ This screenshot shows all automated test cases executing and passing inside the 
 ![Coverage Report](screenshots/04-coverage-report.png)
 This screenshot displays the code coverage report, confirming that overall coverage exceeds the required threshold.
 
-
-
 ---
 
 ## Setup Instructions (Local)

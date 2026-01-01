@@ -157,14 +157,24 @@ docker-compose down
 
 ## Screenshots
 
-Screenshots demonstrating the following are included in the repository:
+The following screenshots demonstrate the successful execution, testing, and Dockerisation of the project.
 
-- Docker image published on Docker Hub
-- Successful Docker build
-- Tests passing inside Docker container
-- Coverage report
+### Docker Image Published on Docker Hub
+![Docker Hub Image](screenshots/01-dockerhub-image.png)
+This screenshot shows the publicly available Docker image for the project published on Docker Hub.
 
-All screenshots are stored in the `screenshots/` directory.
+### Successful Docker Build
+![Docker Build Success](screenshots/02-docker-build-success.png)
+This screenshot confirms that the Docker image builds successfully using the provided Dockerfile without any errors.
+
+### Tests Passing Inside Docker Container
+![Docker Tests Passing](screenshots/03-docker-tests-passing.png)
+This screenshot shows all automated test cases executing and passing inside the Docker container environment.
+
+### Coverage Report
+![Coverage Report](screenshots/04-coverage-report.png)
+This screenshot displays the code coverage report, confirming that overall coverage exceeds the required threshold.
+
 
 ---
 

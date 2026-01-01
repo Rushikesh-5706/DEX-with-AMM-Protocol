@@ -46,6 +46,8 @@ A simple ERC-20 token used for testing:
 - Allows minting for test scenarios
 - Represents Token A and Token B in the DEX
 
+LP tokens are implemented as internal accounting within the DEX contract rather than a separate ERC-20 token, as transferable LP tokens were not required for this implementation.
+
 The project uses **Hardhat** for development and testing, and **Docker** to ensure the environment is reproducible on any machine.
 
 ---

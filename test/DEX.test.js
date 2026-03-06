@@ -400,13 +400,17 @@ describe("DEX", function () {
     it("should emit LiquidityAdded event", async function () {
       const amtA = ethers.utils.parseEther("100");
       const amtB = ethers.utils.parseEther("200");
+      // Pre-compute expected LP = sqrt(amtA * amtB) using Babylonian method
+      const amtABig = BigInt(amtA.toString());
+      const amtBBig = BigInt(amtB.toString());
+      let y = amtABig * amtBBig;
+      let z = y;
+      let x = y / 2n + 1n;
+      while (x < z) { z = x; x = (y / x + x) / 2n; }
+      const expectedLP = ethers.BigNumber.from(z.toString());
       await expect(dex.addLiquidity(amtA, amtB))
         .to.emit(dex, "LiquidityAdded")
-        .withArgs(owner.address, amtA, amtB, await (async () => {
-          // Compute expected LP: sqrt(amtA * amtB)
-          // We just check event is emitted with correct provider and amounts
-          return (await dex.totalLiquidity()) || ethers.BigNumber.from(0);
-        })());
+        .withArgs(owner.address, amtA, amtB, expectedLP);
     });
 
     it("should emit LiquidityRemoved event", async function () {

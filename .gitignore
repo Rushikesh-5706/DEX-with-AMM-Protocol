@@ -1,6 +1,23 @@
+# Dependencies
 node_modules/
+
+# Hardhat build artifacts
 artifacts/
 cache/
+typechain-types/
+
+# Coverage
 coverage/
+coverage.json
+
+# Environment
 .env
-.git/
+.env.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db

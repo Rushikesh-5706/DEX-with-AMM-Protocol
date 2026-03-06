@@ -131,6 +131,22 @@ Some defensive branches remain intentionally uncovered because they represent un
 
 ---
 
+## Contract Addresses
+
+This project is configured for local development using the Hardhat network (chainId: 31337).
+It has not been deployed to a public testnet.
+
+To deploy to a testnet (e.g., Sepolia), update `hardhat.config.js` with network credentials
+and run:
+
+```bash
+npx hardhat run scripts/deploy.js --network sepolia
+```
+
+Contract addresses will be printed to the console after successful deployment.
+
+---
+
 ## Dockerisation
 
 This project is fully Dockerised to ensure consistent execution across environments.
@@ -161,10 +177,11 @@ docker-compose down
 
 Screenshots demonstrating the following are included in the repository:
 
-- Docker image published on Docker Hub
-- Successful Docker build
-- Tests passing inside Docker container
-- Coverage report
+- [Docker image published on Docker Hub](screenshots/01-dockerhub-image.png)
+- [Successful Docker build](screenshots/02-docker-build-success.png)
+- [Tests passing inside Docker container](screenshots/03-docker-tests-passing.png)
+- [Coverage report](screenshots/04-coverage-report.png)
+- [Project structure](screenshots/05-project-structure.png)
 
 All screenshots are stored in the `screenshots/` directory.
 
